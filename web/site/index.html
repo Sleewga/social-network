@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <section class="nav-bar container">
+      <ul class="nav-bar-left">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="users.html"><i class="fa-solid fa-users"></i></a></li>
+      </ul>
+      <ul class="nav-bar-right">
+        <li id="nav-user-link"><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="#" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+      </ul>
+    </section>
+  </header>
+  <main>
+    <section class="articles" id="articles">
+
+      <!-- New post form -->
+      <div class="new-post container" id="new-post-form">
+        <h2 class="new-post-title">New Post</h2>
+        <div id="post-error" class="error-msg hidden"></div>
+        <div class="form-group">
+          <input type="text" id="post-title" placeholder="Title" maxlength="64" />
+        </div>
+        <div class="form-group">
+          <textarea id="post-content" placeholder="What's on your mind?" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="file-label" for="post-image"><i class="fa-solid fa-image"></i> Attach image (optional)</label>
+          <input type="file" id="post-image" accept="image/*" class="hidden-file-input" />
+          <span id="post-image-name" class="file-name-preview"></span>
+        </div>
+        <button id="post-submit-btn" class="btn btn-primary">Post</button>
+      </div>
+
+      <ul id="articles-list">
+      </ul>
+    </section>
+  </main>
+  <footer></footer>
+  <script type="module" src="../scripts/index.js"></script>
+</body>
+</html>
