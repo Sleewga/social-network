@@ -2,10 +2,11 @@ import express from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { query } from "../db-repository.js";
+import "dotenv/config";
 
 const router = express.Router();
 const SALT_ROUNDS = 10;
-const JWT_SECRET = "tajny_klic_123";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 router.post("/login", async (req, res) => {
     const { username, password } = req.body;

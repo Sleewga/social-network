@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <section class="nav-bar container">
+      <ul class="nav-bar-left">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="users.html"><i class="fa-solid fa-users"></i></a></li>
+      </ul>
+      <ul class="nav-bar-right">
+        <li id="nav-user-link"><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="#" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+      </ul>
+    </section>
+  </header>
+  <main>
+    <section class="profile-section">
+      <div class="profile-card container" id="profile-card">
+        <div class="profile-avatar"><i class="fa-solid fa-circle-user"></i></div>
+        <div class="profile-info">
+          <h1 id="profile-name">Loading...</h1>
+          <span id="profile-username" class="profile-username"></span>
+          <span id="profile-pronouns" class="profile-pronouns"></span>
+          <span id="profile-since" class="profile-since"></span>
+        </div>
+      </div>
+
+      <div class="profile-articles">
+        <h2 class="section-title">Posts</h2>
+        <ul id="own-articles-list" class="articles"></ul>
+        <p id="own-empty" class="empty-msg hidden">No posts yet.</p>
+
+        <h2 class="section-title">Liked or commented</h2>
+        <ul id="interacted-articles-list" class="articles"></ul>
+        <p id="interacted-empty" class="empty-msg hidden">No activity yet.</p>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script type="module" src="../scripts/profile/profile.js"></script>
+</body>
+</html>

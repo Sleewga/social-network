@@ -43,7 +43,7 @@ router.post("/", async (req, res) => {
 });
 
 router.delete("/", async (req, res) => {
-    const { article_id, account_id } = req.body;
+    const { article_id, account_id } = req.query;
 
     if (!article_id || !account_id) {
         return res.status(400).send("article_id and account_id are required");
@@ -54,11 +54,9 @@ router.delete("/", async (req, res) => {
             "DELETE FROM reaction WHERE article_id = ? AND account_id = ?",
             [article_id, account_id]
         );
-
         res.status(200).send("Reaction removed");
     } catch (err) {
         res.status(500).send("Server error");
     }
 });
-
 export default router;

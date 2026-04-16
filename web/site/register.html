@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-container">
+    <div class="auth-box container">
+      <h1 class="auth-title">Create account</h1>
+      <p class="auth-subtitle">Join the network</p>
+
+      <div id="error-msg" class="error-msg hidden"></div>
+      <div id="success-msg" class="success-msg hidden"></div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">First name</label>
+          <input type="text" id="name" placeholder="Jan" />
+        </div>
+        <div class="form-group">
+          <label for="surname">Last name</label>
+          <input type="text" id="surname" placeholder="Novák" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="your_username" autocomplete="username" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" autocomplete="new-password" />
+      </div>
+      <div class="form-group">
+        <label for="pronouns">Pronouns</label>
+        <select id="pronouns">
+          <option value="">Select pronouns</option>
+          <option value="he/him">he/him</option>
+          <option value="she/her">she/her</option>
+          <option value="they/them">they/them</option>
+          <option value="any">any</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="18" min="1" max="120" />
+        <span class="form-hint">Must be 13 or older to register.</span>
+      </div>
+
+      <button id="register-btn" class="btn btn-primary">Create account</button>
+      <p class="auth-link">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+  </main>
+
+  <script type="module" src="../scripts/profile/register.js"></script>
+</body>
+</html>
